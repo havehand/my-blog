@@ -4,12 +4,31 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --modern",
+    "lint": "vue-cli-service lint",
+    "text-Paper": "vue serve ./src/components/Paper/text.vue",
+    "text-Avatar": "vue serve ./src/components/Avatar/text.vue",
+    "text-Icon": "vue serve ./src/components/Icon/text.vue",
+    "text-Empty": "vue serve ./src/components/Empty/text.vue",
+    "text-ImageLoader": "vue serve ./src/components/ImageLoader/text.vue",
+    "text-Contact": "vue serve ./src/components/Contact/text.vue",
+    "text-Menu": "vue serve ./src/components/Menu/text.vue",
+    "text-SiteAside": "vue serve ./src/components/SiteAside/text.vue",
+    "text-Layout": "vue serve ./src/components/Layout/text.vue",
+    "text-Loading": "vue serve ./src/components/Loading/text.vue"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "highlight.js": "^10.7.3",
+    "jquery": "^3.6.0",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "query-string": "^4.3.4",
+    "querystring": "^0.2.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.2",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -18,7 +37,10 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "less": "^4.1.1",
+    "less-loader": "5.0.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyzer": "^3.9.0"
   },
   "eslintConfig": {
     "root": true,

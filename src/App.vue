@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="text-container">
+    <Layout>
+
+      <template #left>
+        <div class="aside">
+          <SideAside></SideAside>
+        </div>
+      </template>
+
+      <template #default>
+        <router-view></router-view>
+      </template>
+    </Layout>
+    <ToTop></ToTop>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SideAside from "@/components/SiteAside"
+import Layout from "@/components/Layout"
+import ToTop from "@/components/ToTop"
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    SideAside,
+    Layout,
+    ToTop
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped lang="less">
+.text-container{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  .aside{
+    width: 250px;
+    height: 100%;
+    background-color: black;
+  }
 }
 </style>
